@@ -39,7 +39,7 @@
         }
         /* TOC Container */
         .toc-container {
-            background-color: #007bb5; /* Dunkleres Blau */
+            background-color: #97c6dd; /* Etwas dunkleres Blau */
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 40px;
@@ -64,10 +64,6 @@
         }
         .toc a:hover {
             text-decoration: underline;
-        }
-        .toc li:not(:last-child) {
-            border-right: 2px solid #ffffff; /* Senkrechte Unterteilung */
-            padding-right: 10px;
         }
 
         /* Responsive Styles */
@@ -111,8 +107,10 @@
 
 <body>
 
-<h1>Wahlkarten: AfD Ergebnisse bei der EU Wahl 2024</h1>
+<h1>Wahlkarten</h1>
+<h3>AfD Ergebnisse bei der EU Wahl 2024</h3>
 
+<div class="blue-box">
 <h4>Leider haben wir begrenzte Ressourcen und es gibt auch nicht für alle Städte Geodaten. Deshalb gibt es nur eine Auswahl an Städten.</h4>
 
 <p><strong>WICHTIG:</strong> In den meisten Städten werden nur die Stimmen der Urnenwahl dargestellt. Das führt zu einer ziemlichen Überschätzung der AfD-Werte. Das liegt daran, dass die AfD meist deutlich mehr Stimmen über die Urnenwahl bekommt als über die Briefwahl. Ein Beispiel hierfür ist in München zu sehen:
@@ -124,8 +122,9 @@
 <h4>Weitere Ressourcen:</h4>
 <ul>
     <li><a href="https://www.zeit.de/politik/deutschland/2024-06/europawahl-ergebnisse-daten-grossstaedte-wahllokale" target="_blank">Die ZEIT</a></li> hat ein ähnliches Projekt gemacht
-    <li><a href="https://interaktiv.tagesspiegel.de/lab/bundestagswahl-2025-ergebnisse-karten-historisch-wahlkreise-gemeinden/" target="_blank">Der Tagesspiegel</a></li> stellt die Ergebnisse der Bundestagswahl dar, allerdings auf Ebene der Gemeinden
+    <li><a href="https://interaktiv.tagesspiegel.de/lab/bundestagswahl-2025-ergebnisse-karten-historisch-wahlkreise-gemeinden/" target="_blank">Der Tagesspiegel</a></li> stellt die Ergebnisse der Bundestagswahl dar, allerdings auf Ebene der Gemeinden. Besonders im ländlichen Raum sind Gemeinden und Wahlbezirke aber oft identisch.
 </ul>
+</div>
 
 <h4>Hier die Links zu den Städten:</h4>
 
@@ -146,8 +145,6 @@
     </ul>
 </div>
 
-<!-- Blue box with background above the frames -->
-<div class="blue-box">
     <h2 id="berlin">Berlin</h2>
     <iframe src="assets/berlin_eu_24.html"></iframe>
 
@@ -180,7 +177,6 @@
 
     <h2 id="stuttgart">Stuttgart</h2>
     <iframe src="assets/stuttgart_eu_24.html"></iframe>
-</div>
 
 </body>
 </html>
