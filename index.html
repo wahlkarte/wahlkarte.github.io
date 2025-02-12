@@ -35,6 +35,7 @@
             height: 500px;
             border: none;
             margin-bottom: 30px;
+            cursor: pointer; /* Change cursor to indicate it's clickable */
         }
         /* Blassblauer Kasten oberhalb der Frames */
         .blue-box {
@@ -70,6 +71,45 @@
         }
         .toc a:hover {
             text-decoration: underline;
+        }
+
+        /* Pop-up Styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .popup-content {
+            background-color: white;
+            width: 90%;
+            height: 90%;
+            max-width: 1200px;
+            max-height: 800px;
+            overflow: hidden;
+        }
+        .popup-content iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2em;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
         }
 
         /* Responsive Styles */
@@ -151,38 +191,61 @@
     </ul>
 </div>
 
-    <h2 id="berlin">Berlin</h2>
-    <iframe src="assets/berlin_eu_24.html"></iframe>
+<!-- Pop-up Overlay and Content -->
+<div id="popup" class="popup-overlay">
+    <button class="close-btn" onclick="closePopup()">×</button>
+    <div class="popup-content">
+        <iframe id="popup-iframe" src="" frameborder="0"></iframe>
+    </div>
+</div>
 
-    <h2 id="darmstadt">Darmstadt</h2>
-    <iframe src="assets/darmstadt_eu_24.html"></iframe>
+<!-- Maps (with click event to trigger pop-up) -->
+<h2 id="berlin">Berlin</h2>
+<iframe src="assets/berlin_eu_24.html" onclick="openPopup('assets/berlin_eu_24.html')"></iframe>
 
-    <h2 id="dresden">Dresden</h2>
-    <iframe src="assets/dresden_eu_24.html"></iframe>
+<h2 id="darmstadt">Darmstadt</h2>
+<iframe src="assets/darmstadt_eu_24.html" onclick="openPopup('assets/darmstadt_eu_24.html')"></iframe>
 
-    <h2 id="duesseldorf">Düsseldorf</h2>
-    <iframe src="assets/duesseldorf_eu_24.html"></iframe>
+<h2 id="dresden">Dresden</h2>
+<iframe src="assets/dresden_eu_24.html" onclick="openPopup('assets/dresden_eu_24.html')"></iframe>
 
-    <h2 id="frankfurt">Frankfurt</h2>
-    <iframe src="assets/frankfurt_eu_24.html"></iframe>
+<h2 id="duesseldorf">Düsseldorf</h2>
+<iframe src="assets/duesseldorf_eu_24.html" onclick="openPopup('assets/duesseldorf_eu_24.html')"></iframe>
 
-    <h2 id="hamburg">Hamburg</h2>
-    <iframe src="assets/hamburg_eu_24.html"></iframe>
+<h2 id="frankfurt">Frankfurt</h2>
+<iframe src="assets/frankfurt_eu_24.html" onclick="openPopup('assets/frankfurt_eu_24.html')"></iframe>
 
-    <h2 id="koeln">Köln</h2>
-    <iframe src="assets/koeln_eu_24.html"></iframe>
+<h2 id="hamburg">Hamburg</h2>
+<iframe src="assets/hamburg_eu_24.html" onclick="openPopup('assets/hamburg_eu_24.html')"></iframe>
 
-    <h2 id="leipzig">Leipzig</h2>
-    <iframe src="assets/leipzig_eu_24.html"></iframe>
+<h2 id="koeln">Köln</h2>
+<iframe src="assets/koeln_eu_24.html" onclick="openPopup('assets/koeln_eu_24.html')"></iframe>
 
-    <h2 id="muenster">Münster</h2>
-    <iframe src="assets/muenster_eu_24.html"></iframe>
+<h2 id="leipzig">Leipzig</h2>
+<iframe src="assets/leipzig_eu_24.html" onclick="openPopup('assets/leipzig_eu_24.html')"></iframe>
 
-    <h2 id="potsdam">Potsdam</h2>
-    <iframe src="assets/potsdam_eu_24.html"></iframe>
+<h2 id="muenster">Münster</h2>
+<iframe src="assets/muenster_eu_24.html" onclick="openPopup('assets/muenster_eu_24.html')"></iframe>
 
-    <h2 id="stuttgart">Stuttgart</h2>
-    <iframe src="assets/stuttgart_eu_24.html"></iframe>
+<h2 id="potsdam">Potsdam</h2>
+<iframe src="assets/potsdam_eu_24.html" onclick="openPopup('assets/potsdam_eu_24.html')"></iframe>
+
+<h2 id="stuttgart">Stuttgart</h2>
+<iframe src="assets/stuttgart_eu_24.html" onclick="openPopup('assets/stuttgart_eu_24.html')"></iframe>
+
+<script>
+    // Open Pop-up function
+    function openPopup(url) {
+        document.getElementById('popup-iframe').src = url;
+        document.getElementById('popup').style.display = 'flex';
+    }
+
+    // Close Pop-up function
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('popup-iframe').src = ''; // Stop the iframe from loading
+    }
+</script>
 
 </body>
 </html>
