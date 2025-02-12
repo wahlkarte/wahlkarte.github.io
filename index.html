@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EU Wahl 2024 Ergebnisse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Lato', sans-serif;
             margin: 20px;
             background-color: #f4f4f4;
             color: #333;
+            padding-top: 50px; /* Vergrößertes Padding oben */
         }
         h1 {
             text-align: center;
-            font-size: 2em;
+            font-size: 3em; /* Größerer Titel */
+            margin-bottom: 20px;
         }
         h2 {
             color: #000000;
@@ -27,30 +30,53 @@
             border: none;
             margin-bottom: 30px;
         }
+        /* Blassblauer Kasten oberhalb der Frames */
+        .blue-box {
+            background-color: #e0f7fa;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+        /* TOC Container */
+        .toc-container {
+            background-color: #007bb5; /* Dunkleres Blau */
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        /* TOC Styles */
         .toc {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             list-style-type: none;
             padding: 0;
-            margin: 20px 0;
+            margin: 0;
         }
         .toc li {
-            margin: 5px 0;
+            margin: 10px 0;
+            flex: 1 1 45%; /* Die Links in zwei Spalten */
         }
         .toc a {
             text-decoration: none;
-            color: #0000FF;
+            color: #ffffff;
             font-size: 1.2em;
         }
         .toc a:hover {
             text-decoration: underline;
         }
+        .toc li:not(:last-child) {
+            border-right: 2px solid #ffffff; /* Senkrechte Unterteilung */
+            padding-right: 10px;
+        }
 
         /* Responsive Styles */
         @media (max-width: 768px) {
             h1 {
-                font-size: 1.8em;
+                font-size: 2.5em;
             }
             h2 {
-                font-size: 1.3em;
+                font-size: 1.5em;
             }
             iframe {
                 height: 350px;
@@ -58,11 +84,16 @@
             .toc a {
                 font-size: 1.1em;
             }
+            .toc li {
+                flex: 1 1 100%; /* TOC in einer Spalte bei kleineren Bildschirmen */
+                border-right: none;
+                padding-right: 0;
+            }
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.5em;
+                font-size: 2em;
             }
             h2 {
                 font-size: 1.2em;
@@ -78,12 +109,13 @@
     </style>
 </head>
 
+<body>
 
-<h1>Hier findet ihr einen Überblick über die Ergebnisse der AfD in der EU Wahl 2024</h1>
+<h1>Wahlkarten: AfD Ergebnisse bei der EU Wahl 2024</h1>
 
 <h4>Leider haben wir begrenzte Ressourcen und es gibt auch nicht für alle Städte Geodaten. Deshalb gibt es nur eine Auswahl an Städten.</h4>
 
-<p><strong>WICHTIG:</strong> In den meisten Städten werden nur die Stimmen der Urnenwahl dargestellt. Das führt zu einer ziemlichen Überschätzung der AfD-Werte. Das liegt daran, dass die AfD meist deutlich mehr Stimmen über die Urnenwahl bekommt als über die Briefwahl. Ein Beispiel hierfür ist in München zu sehen: 
+<p><strong>WICHTIG:</strong> In den meisten Städten werden nur die Stimmen der Urnenwahl dargestellt. Das führt zu einer ziemlichen Überschätzung der AfD-Werte. Das liegt daran, dass die AfD meist deutlich mehr Stimmen über die Urnenwahl bekommt als über die Briefwahl. Ein Beispiel hierfür ist in München zu sehen:
 <a href="https://www.wahlen-muenchen.de/ergebnisse/20240609europawahl/ergebnisse_gemeinde_162.html#id_c27c6c02_2d44_4b06_b4fc_2aa6f662f93c" target="_blank">München Wahl Ergebnisse</a>.
 </p>
 
@@ -97,7 +129,8 @@
 
 <h4>Hier die Links zu den Städten:</h4>
 
-<body>
+<!-- TOC Container with darker blue background -->
+<div class="toc-container">
     <ul class="toc">
         <li><a href="#berlin">Berlin</a></li>
         <li><a href="#darmstadt">Darmstadt</a></li>
@@ -111,7 +144,10 @@
         <li><a href="#potsdam">Potsdam</a></li>
         <li><a href="#stuttgart">Stuttgart</a></li>
     </ul>
+</div>
 
+<!-- Blue box with background above the frames -->
+<div class="blue-box">
     <h2 id="berlin">Berlin</h2>
     <iframe src="assets/berlin_eu_24.html"></iframe>
 
@@ -144,5 +180,7 @@
 
     <h2 id="stuttgart">Stuttgart</h2>
     <iframe src="assets/stuttgart_eu_24.html"></iframe>
+</div>
+
 </body>
 </html>
