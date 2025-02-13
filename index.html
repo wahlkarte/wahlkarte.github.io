@@ -8,21 +8,22 @@
         /* General Styles */
         body {
             font-family: 'Times New Roman', serif; /* Schriftart geändert */
-            margin: 20px;
+            margin: 50px; /* Vergrößerter Abstand zu den Seiten */
             background-color: #f4f4f4;
             color: #333;
-            padding-top: 50px; /* Vergrößertes Padding oben */
         }
         h1 {
             text-align: center;
-            font-size: 3em; /* Größerer Titel */
-            margin-bottom: 20px;
+            font-size: 5em; /* Überschrift noch größer */
+            margin-bottom: 10px; /* Weniger Abstand zur Unterüberschrift */
+            font-weight: normal; /* Keine Fettschrift */
         }
         h3 {
             color: #000000;
-            font-size: 1.8em;
-            font-weight: normal; /* H3 nicht fett */
+            font-size: 2em; /* Größere Unterüberschrift */
+            font-weight: normal; /* Keine Fettschrift */
             text-align: center;
+            margin-top: 0; /* Kein Abstand zur oberen Überschrift */
         }
         h2 {
             color: #000000;
@@ -35,20 +36,6 @@
             border: none;
             margin-bottom: 30px;
             cursor: pointer; /* Change cursor to indicate it's clickable */
-        }
-        /* Blassblauer Kasten oberhalb der Frames */
-        .blue-box {
-            background-color: #e0f7fa;
-            padding: 20px;
-            margin-bottom: 40px;
-            border-radius: 8px;
-        }
-        /* TOC Container */
-        .toc-container {
-            background-color: #97c6dd; /* Etwas dunkleres Blau */
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 40px;
         }
         /* TOC Styles */
         .toc {
@@ -65,7 +52,7 @@
         }
         .toc a {
             text-decoration: none;
-            color: #ffffff;
+            color: #000000;
             font-size: 1.2em;
         }
         .toc a:hover {
@@ -114,7 +101,10 @@
         /* Responsive Styles */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5em;
+                font-size: 3em; /* Kleinere Überschrift bei kleinen Bildschirmen */
+            }
+            h3 {
+                font-size: 1.5em; /* Kleinere Unterüberschrift bei kleinen Bildschirmen */
             }
             h2 {
                 font-size: 1.5em;
@@ -134,7 +124,10 @@
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2em;
+                font-size: 2.5em; /* Noch kleinere Überschrift bei sehr kleinen Bildschirmen */
+            }
+            h3 {
+                font-size: 1.2em; /* Noch kleinere Unterüberschrift bei sehr kleinen Bildschirmen */
             }
             h2 {
                 font-size: 1.2em;
@@ -173,22 +166,20 @@
 
 <h4>Hier die Links zu den Städten:</h4>
 
-<!-- TOC Container with darker blue background -->
-<div class="toc-container">
-    <ul class="toc">
-        <li><a href="#berlin">Berlin</a></li>
-        <li><a href="#darmstadt">Darmstadt</a></li>
-        <li><a href="#dresden">Dresden</a></li>
-        <li><a href="#duesseldorf">Düsseldorf</a></li>
-        <li><a href="#frankfurt">Frankfurt</a></li>
-        <li><a href="#hamburg">Hamburg</a></li>
-        <li><a href="#koeln">Köln</a></li>
-        <li><a href="#leipzig">Leipzig</a></li>
-        <li><a href="#muenster">Münster</a></li>
-        <li><a href="#potsdam">Potsdam</a></li>
-        <li><a href="#stuttgart">Stuttgart</a></li>
-    </ul>
-</div>
+<!-- TOC Container ohne Box -->
+<ul class="toc">
+    <li><a href="#berlin">Berlin</a></li>
+    <li><a href="#darmstadt">Darmstadt</a></li>
+    <li><a href="#dresden">Dresden</a></li>
+    <li><a href="#duesseldorf">Düsseldorf</a></li>
+    <li><a href="#frankfurt">Frankfurt</a></li>
+    <li><a href="#hamburg">Hamburg</a></li>
+    <li><a href="#koeln">Köln</a></li>
+    <li><a href="#leipzig">Leipzig</a></li>
+    <li><a href="#muenster">Münster</a></li>
+    <li><a href="#potsdam">Potsdam</a></li>
+    <li><a href="#stuttgart">Stuttgart</a></li>
+</ul>
 
 <!-- Pop-up Overlay and Content -->
 <div id="popup" class="popup-overlay">
@@ -248,3 +239,4 @@
 
 </body>
 </html>
+
