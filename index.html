@@ -32,10 +32,11 @@
             margin-top: 40px;
         }
         iframe {
-            width: 80%; /* Weniger Breite */
-            height: 600px; /* Höhere Karten */
+            width: 60%; /* Noch schmaler */
+            height: 800px; /* Deutlich höher */
             border: none;
-            margin-bottom: 40px; /* Mehr Abstand zwischen den iFrames */
+            margin: 0 auto 40px; /* Zentrieren und Abstand unten */
+            display: block; /* Block-Level-Element für Zentrierung */
             cursor: pointer; /* Change cursor to indicate it's clickable */
         }
         /* TOC Styles */
@@ -111,7 +112,8 @@
                 font-size: 1.5em;
             }
             iframe {
-                height: 450px; /* Kleinere Höhe bei kleinen Bildschirmen */
+                height: 600px; /* Weniger Höhe bei kleinen Bildschirmen */
+                width: 80%; /* Breite bei kleinen Bildschirmen anpassen */
             }
             .toc a {
                 font-size: 1.1em;
@@ -134,7 +136,8 @@
                 font-size: 1.2em;
             }
             iframe {
-                height: 350px; /* Noch kleinere Höhe bei sehr kleinen Bildschirmen */
+                height: 500px; /* Noch kleinere Höhe bei sehr kleinen Bildschirmen */
+                width: 90%; /* Breite bei sehr kleinen Bildschirmen weiter anpassen */
             }
             .toc a {
                 font-size: 1em;
