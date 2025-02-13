@@ -117,7 +117,7 @@
         }
 
         .city-grid li {
-            background-color: #3498db; /* Blue background */
+            background-color: #98AFC7; /* Neue Kachel-Farbe */
             color: white;
             text-align: center;
             padding: 15px;
@@ -125,6 +125,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             font-size: 1.2em;
             transition: transform 0.3s ease, background-color 0.3s ease;
+            margin-bottom: 30px; /* Extra Margin unter den Kacheln */
         }
 
         .city-grid li a {
@@ -134,7 +135,15 @@
 
         .city-grid li:hover {
             transform: scale(1.05); /* Slightly enlarge the tile */
-            background-color: #2980b9; /* Darker blue on hover */
+            background-color: #7a9ba6; /* Darker shade on hover */
+        }
+
+        /* Styling für den Text "Hier die Links zu den Städten:" */
+        .city-links-title {
+            font-size: 1.2em; /* Gleiche Größe wie der Haupttext */
+            font-weight: 300;
+            text-align: center;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -155,7 +164,7 @@
     </ul>
 </div>
 
-<h4>Hier die Links zu den Städten:</h4>
+<h4 class="city-links-title">Hier die Links zu den Städten:</h4>
 
 <!-- Grid Container für die Städte -->
 <ul class="city-grid">
@@ -230,4 +239,5 @@
 
 </body>
 </html>
+
 
