@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EU Wahl 2024 Ergebnisse</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Times New Roman', serif; /* Schriftart geändert */
             margin: 20px;
             background-color: #f4f4f4;
             color: #333;
@@ -16,14 +15,16 @@
         }
         h1 {
             text-align: center;
-            font-size: 3em; /* Größerer Titel */
-            margin-bottom: 20px;
+            font-size: 4em; /* Überschrift noch größer */
+            margin-bottom: 10px; /* Weniger Abstand zur Unterüberschrift */
+            font-weight: normal; /* Keine Fettschrift */
         }
         h3 {
             color: #000000;
-            font-size: 1.8em;
-            font-weight: normal; /* H3 nicht fett */
+            font-size: 2em; /* Größere Unterüberschrift */
+            font-weight: normal; /* Keine Fettschrift */
             text-align: center;
+            margin-top: 0; /* Kein Abstand zur oberen Überschrift */
         }
         h2 {
             color: #000000;
@@ -115,7 +116,10 @@
         /* Responsive Styles */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.5em;
+                font-size: 3em; /* Kleinere Überschrift bei kleinen Bildschirmen */
+            }
+            h3 {
+                font-size: 1.5em; /* Kleinere Unterüberschrift bei kleinen Bildschirmen */
             }
             h2 {
                 font-size: 1.5em;
@@ -135,7 +139,10 @@
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 2em;
+                font-size: 2.5em; /* Noch kleinere Überschrift bei sehr kleinen Bildschirmen */
+            }
+            h3 {
+                font-size: 1.2em; /* Noch kleinere Unterüberschrift bei sehr kleinen Bildschirmen */
             }
             h2 {
                 font-size: 1.2em;
@@ -249,3 +256,4 @@
 
 </body>
 </html>
+
