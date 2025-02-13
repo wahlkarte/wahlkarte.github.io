@@ -97,50 +97,69 @@
 
         /* Responsive Styles */
         /* Veränderte Styles für mobile Ansichten */
-        /* Responsive Styles */
-        
         @media (max-width: 1024px) {
             body {
-                margin: 20px;
-                font-size: 1.1em;
+                margin: 20px; /* Weniger Rand auf größeren Tablets und kleineren Laptops */
+                font-size: 1.1em; /* Etwas kleinere Schriftgröße */
+            }
+        
+            h1 {
+                font-size: 3em; /* Kleinere Schrift für die Überschrift */
+            }
+        
+            h3 {
+                font-size: 1.8em; /* Kleinere Schrift für h3 */
+            }
+        
+            h2 {
+                font-size: 1.6em; /* Kleinere Schrift für h2 */
             }
         
             iframe {
                 width: 100%; /* Volle Breite auf mobilen Geräten */
-                height: 500px; /* Reduzierte Höhe */
+                height: 600px; /* Angepasste Höhe */
+                margin-bottom: 30px; /* Weniger Abstand unter den iframes */
             }
         
             .city-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Kacheln kleiner und mit weniger Spalten */
-                gap: 12px; /* Weniger Abstand zwischen den Kacheln */
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Weniger Spalten für mobile Geräte */
+                gap: 15px; /* Weniger Abstand zwischen den Kacheln */
             }
-        
+
             .city-grid li {
-                font-size: 1.2em; /* Schriftgröße anpassen */
+            font-size: 1.2em;
             }
-        
+            
             .main-text {
-                font-size: 1.2em;
-                margin: 20px 0;
+                font-size: 1.2em; /* Textgröße auf kleineren Geräten etwas verringern */
+                margin: 20px 0; /* Weniger Rand */
             }
         }
         
         @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em; /* Noch kleinere Schrift für die mobile Ansicht */
+            }
+        
+            h3 {
+                font-size: 1.5em; /* Noch kleinere Schrift */
+            }
+        
             iframe {
-                height: 400px; /* Noch kleinere Höhe für Handys */
+                height: 450px; /* Noch kleinere Höhe für iframes auf Handys */
             }
-        
-            .city-grid {
-                grid-template-columns: 1fr; /* Kacheln untereinander */
-            }
-        
+
             .city-grid li {
-                font-size: 1.1em; /* Schriftgröße noch kleiner */
+            font-size: 1em;
             }
         
             .main-text {
-                font-size: 1em;
-                margin: 10px 0;
+                font-size: 1em; /* Weitere Anpassung der Textgröße */
+                margin: 10px 0; /* Weniger Abstand für den Text */
+            }
+        
+            .city-grid {
+                grid-template-columns: 1fr; /* Kacheln untereinander anordnen */
             }
         }
 
