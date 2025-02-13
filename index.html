@@ -11,12 +11,13 @@
             margin: 70px; /* Vergrößerter Abstand zu den Seiten */
             background-color: #f4f4f4;
             color: #333;
+            font-size: 1.2em; /* Fließtext größer */
         }
         h1 {
             text-align: center;
             font-size: 4.5em; /* Überschrift noch größer */
-            margin-bottom: 15px; /* Weniger Abstand zur Unterüberschrift */
-            font-weight: 300; /* Keine Fettschrift */
+            margin-bottom: 5px; /* Weniger Abstand zur Unterüberschrift */
+            font-weight: 500; /* Keine Fettschrift */
         }
         h3 {
             color: #000000;
@@ -39,21 +40,21 @@
         }
         /* TOC Styles */
         .toc {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Drei Spalten */
+            gap: 20px; /* Abstand zwischen den Links */
             list-style-type: none;
             padding: 0;
             margin: 0;
+            justify-items: center; /* Zentriert die Links */
         }
         .toc li {
             margin: 10px 0;
-            flex: 1 1 30%; /* Die Links in drei Spalten */
         }
         .toc a {
             text-decoration: none;
             color: #000000;
-            font-size: 1em;
+            font-size: 1.2em;
         }
         .toc a:hover {
             text-decoration: underline;
@@ -239,4 +240,5 @@
 
 </body>
 </html>
+
 
