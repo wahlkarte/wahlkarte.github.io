@@ -7,24 +7,24 @@
     <style>
         /* General Styles */
         body {
-            font-family: 'Lato', sans-serif; /* Schriftart geändert */
-            margin: 70px; /* Vergrößerter Abstand zu den Seiten */
+            font-family: 'Lato', sans-serif;
+            margin: 70px;
             background-color: #f4f4f4;
             color: #333;
-            font-size: 1.2em; /* Fließtext größer */
+            font-size: 1.2em;
         }
         h1 {
             text-align: center;
-            font-size: 4.5em; /* Überschrift noch größer */
-            margin-bottom: 5px; /* Weniger Abstand zur Unterüberschrift */
-            font-weight: 500; /* Keine Fettschrift */
+            font-size: 4.5em;
+            margin-bottom: 5px;
+            font-weight: 500;
         }
         h3 {
             color: #000000;
-            font-size: 2em; /* Größere Unterüberschrift */
-            font-weight: 300; /* Keine Fettschrift */
+            font-size: 2em;
+            font-weight: 300;
             text-align: center;
-            margin-top: 0; /* Kein Abstand zur oberen Überschrift */
+            margin-top: 0;
         }
         h2 {
             color: #000000;
@@ -32,33 +32,23 @@
             margin-top: 40px;
         }
         iframe {
-            width: 60%; /* Noch schmaler */
-            height: 900px; /* Deutlich höher */
+            width: 60%;
+            height: 800px;
             border: none;
-            margin: 0 auto 40px; /* Zentrieren und Abstand unten */
-            display: block; /* Block-Level-Element für Zentrierung */
-            cursor: pointer; /* Change cursor to indicate it's clickable */
+            margin: 0 auto 40px;
+            display: block;
+            cursor: pointer;
         }
-        /* TOC Styles */
-        .toc {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Drei Spalten */
-            gap: 10px; /* Abstand zwischen den Links */
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            justify-items: center; /* Zentriert die Links */
+
+        /* Larger text for the main content */
+        .main-text {
+            font-size: 1.4em; /* Increased font size */
+            line-height: 1.6; /* Spacing between lines */
         }
-        .toc li {
-            margin: 10px 0;
-        }
-        .toc a {
-            text-decoration: none;
-            color: #000000;
-            font-size: 1.2em;
-        }
-        .toc a:hover {
-            text-decoration: underline;
+
+        /* Additional space between text and iframe */
+        iframe:first-of-type {
+            margin-top: 50px; /* Add extra space before the first iframe */
         }
 
         /* Pop-up Styles */
@@ -69,7 +59,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
-            display: none; /* Hidden by default */
+            display: none;
             justify-content: center;
             align-items: center;
             z-index: 1000;
@@ -102,48 +92,17 @@
 
         /* Responsive Styles */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 3em; /* Kleinere Überschrift bei kleinen Bildschirmen */
-            }
-            h3 {
-                font-size: 1.5em; /* Kleinere Unterüberschrift bei kleinen Bildschirmen */
-            }
-            h2 {
-                font-size: 1.5em;
-            }
             iframe {
-                height: 600px; /* Weniger Höhe bei kleinen Bildschirmen */
-                width: 80%; /* Breite bei kleinen Bildschirmen anpassen */
-            }
-            .toc a {
-                font-size: 1.1em;
-            }
-            .toc li {
-                flex: 1 1 100%; /* TOC in einer Spalte bei kleineren Bildschirmen */
-                border-right: none;
-                padding-right: 0;
+                height: 600px;
+                width: 80%;
             }
         }
-
         @media (max-width: 480px) {
-            h1 {
-                font-size: 2.5em; /* Noch kleinere Überschrift bei sehr kleinen Bildschirmen */
-            }
-            h3 {
-                font-size: 1.2em; /* Noch kleinere Unterüberschrift bei sehr kleinen Bildschirmen */
-            }
-            h2 {
-                font-size: 1.2em;
-            }
             iframe {
-                height: 500px; /* Noch kleinere Höhe bei sehr kleinen Bildschirmen */
-                width: 90%; /* Breite bei sehr kleinen Bildschirmen weiter anpassen */
-            }
-            .toc a {
-                font-size: 1em;
+                height: 500px;
+                width: 90%;
             }
         }
-
     </style>
 </head>
 
@@ -152,20 +111,18 @@
 <h1>Wahlkarten</h1>
 <h3>AfD Ergebnisse bei der EU Wahl 2024</h3>
 
-<div class="blue-box">
-<h4>Leider haben wir begrenzte Ressourcen und es gibt auch nicht für alle Städte Geodaten. Deshalb gibt es nur eine Auswahl an Städten.</h4>
+<div class="main-text">
+    <p>Leider haben wir begrenzte Ressourcen und es gibt auch nicht für alle Städte Geodaten. Deshalb gibt es nur eine Auswahl an Städten.</p>
 
-<p><strong>WICHTIG:</strong> In den meisten Städten werden nur die Stimmen der Urnenwahl dargestellt. Das führt zu einer ziemlichen Überschätzung der AfD-Werte. Das liegt daran, dass die AfD meist deutlich mehr Stimmen über die Urnenwahl bekommt als über die Briefwahl. Ein Beispiel hierfür ist in München zu sehen:
-<a href="https://www.wahlen-muenchen.de/ergebnisse/20240609europawahl/ergebnisse_gemeinde_162.html#id_c27c6c02_2d44_4b06_b4fc_2aa6f662f93c" target="_blank">München Wahl Ergebnisse</a>.
-</p>
+    <p><strong>WICHTIG:</strong> In den meisten Städten werden nur die Stimmen der Urnenwahl dargestellt. Das führt zu einer ziemlichen Überschätzung der AfD-Werte. Das liegt daran, dass die AfD meist deutlich mehr Stimmen über die Urnenwahl bekommt als über die Briefwahl. Ein Beispiel hierfür ist in München zu sehen: <a href="https://www.wahlen-muenchen.de/ergebnisse/20240609europawahl/ergebnisse_gemeinde_162.html#id_c27c6c02_2d44_4b06_b4fc_2aa6f662f93c" target="_blank">München Wahl Ergebnisse</a>.</p>
 
-<p>Die räumliche Verteilung der Zustimmung zur AfD wird aber vermutlich gut widergespiegelt. Als Anhaltspunkt für Haustürgespräche sind die Karten deshalb gut geeignet.</p>
+    <p>Die räumliche Verteilung der Zustimmung zur AfD wird aber vermutlich gut widergespiegelt. Als Anhaltspunkt für Haustürgespräche sind die Karten deshalb gut geeignet.</p>
 
-<h4>Weitere Ressourcen:</h4>
-<ul>
-    <li><a href="https://www.zeit.de/politik/deutschland/2024-06/europawahl-ergebnisse-daten-grossstaedte-wahllokale" target="_blank">Die ZEIT</a></li> hat ein ähnliches Projekt gemacht
-    <li><a href="https://interaktiv.tagesspiegel.de/lab/bundestagswahl-2025-ergebnisse-karten-historisch-wahlkreise-gemeinden/" target="_blank">Der Tagesspiegel</a></li> stellt die Ergebnisse der Bundestagswahl dar, allerdings auf Ebene der Gemeinden. Besonders im ländlichen Raum sind Gemeinden und Wahlbezirke aber oft identisch.
-</ul>
+    <h4>Weitere Ressourcen:</h4>
+    <ul>
+        <li><a href="https://www.zeit.de/politik/deutschland/2024-06/europawahl-ergebnisse-daten-grossstaedte-wahllokale" target="_blank">Die ZEIT</a> hat ein ähnliches Projekt gemacht</li>
+        <li><a href="https://interaktiv.tagesspiegel.de/lab/bundestagswahl-2025-ergebnisse-karten-historisch-wahlkreise-gemeinden/" target="_blank">Der Tagesspiegel</a> stellt die Ergebnisse der Bundestagswahl dar, allerdings auf Ebene der Gemeinden. Besonders im ländlichen Raum sind Gemeinden und Wahlbezirke aber oft identisch.</li>
+    </ul>
 </div>
 
 <h4>Hier die Links zu den Städten:</h4>
@@ -195,7 +152,7 @@
 
 <!-- Maps (with click event to trigger pop-up) -->
 <h3 id="berlin">Berlin</h3>
-<iframe src="assets/berlin_eu_24.html" onclick="openPopup('assets/berlin_eu_24.html')style="margin-top: 40px;"></iframe>
+<iframe src="assets/berlin_eu_24.html" onclick="openPopup('assets/berlin_eu_24.html')"></iframe>
 
 <h3 id="darmstadt">Darmstadt</h3>
 <iframe src="assets/darmstadt_eu_24.html" onclick="openPopup('assets/darmstadt_eu_24.html')"></iframe>
