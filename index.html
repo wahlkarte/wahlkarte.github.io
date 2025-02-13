@@ -8,7 +8,7 @@
         /* General Styles */
         body {
             font-family: 'Lato', sans-serif;
-            margin: 10%;
+            margin: 70px;
             background-color: #f4f4f4;
             color: #333;
             font-size: 1.3em;
@@ -109,7 +109,7 @@
         
             iframe {
                 width: 100%; /* Volle Breite auf mobilen Geräten */
-                height: 400px; /* Angepasste Höhe */
+                height: 600px; /* Angepasste Höhe */
                 margin-bottom: 30px; /* Weniger Abstand unter den iframes */
             }
         
@@ -117,7 +117,11 @@
                 grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Weniger Spalten für mobile Geräte */
                 gap: 15px; /* Weniger Abstand zwischen den Kacheln */
             }
-        
+
+            .city-grid li {
+            font-size: 1.2em;
+            }
+            
             .main-text {
                 font-size: 1.2em; /* Textgröße auf kleineren Geräten etwas verringern */
                 margin: 20px 0; /* Weniger Rand */
@@ -134,7 +138,11 @@
             }
         
             iframe {
-                height: 300px; /* Noch kleinere Höhe für iframes auf Handys */
+                height: 450px; /* Noch kleinere Höhe für iframes auf Handys */
+            }
+
+            .city-grid li {
+            font-size: 1em;
             }
         
             .main-text {
