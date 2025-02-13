@@ -88,18 +88,65 @@
         }
 
         /* Responsive Styles */
-        @media (max-width: 768px) {
+        /* Veränderte Styles für mobile Ansichten */
+        @media (max-width: 1024px) {
+            body {
+                margin: 20px; /* Weniger Rand auf größeren Tablets und kleineren Laptops */
+                font-size: 1.1em; /* Etwas kleinere Schriftgröße */
+            }
+        
+            h1 {
+                font-size: 3em; /* Kleinere Schrift für die Überschrift */
+            }
+        
+            h3 {
+                font-size: 1.8em; /* Kleinere Schrift für h3 */
+            }
+        
+            h2 {
+                font-size: 1.6em; /* Kleinere Schrift für h2 */
+            }
+        
             iframe {
-                height: 600px;
-                width: 80%;
+                width: 100%; /* Volle Breite auf mobilen Geräten */
+                height: 400px; /* Angepasste Höhe */
+                margin-bottom: 30px; /* Weniger Abstand unter den iframes */
+            }
+        
+            .city-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Weniger Spalten für mobile Geräte */
+                gap: 15px; /* Weniger Abstand zwischen den Kacheln */
+            }
+        
+            .main-text {
+                font-size: 1.2em; /* Textgröße auf kleineren Geräten etwas verringern */
+                margin: 20px 0; /* Weniger Rand */
             }
         }
+        
         @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em; /* Noch kleinere Schrift für die mobile Ansicht */
+            }
+        
+            h3 {
+                font-size: 1.5em; /* Noch kleinere Schrift */
+            }
+        
             iframe {
-                height: 500px;
-                width: 90%;
+                height: 300px; /* Noch kleinere Höhe für iframes auf Handys */
+            }
+        
+            .main-text {
+                font-size: 1em; /* Weitere Anpassung der Textgröße */
+                margin: 10px 0; /* Weniger Abstand für den Text */
+            }
+        
+            .city-grid {
+                grid-template-columns: 1fr; /* Kacheln untereinander anordnen */
             }
         }
+
 
         /* Grid Styles for City Links */
         .city-grid {
