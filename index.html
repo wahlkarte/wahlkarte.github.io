@@ -146,6 +146,14 @@
             text-align: left; /* Links ausgerichtet */
             margin-top: 40px;
         }
+
+        /* Styling für den Container hinter dem Text und den Kacheln */
+        .content-wrapper {
+            background-color: #888B90; /* Hintergrundfarbe */
+            padding: 40px; /* Abstand von allen Seiten */
+            margin: 0 auto; /* Zentrieren des Containers */
+            border-radius: 10px; /* Optional: abgerundete Ecken */
+        }
     </style>
 </head>
 
@@ -154,33 +162,35 @@
 <h1>Wahlkarten</h1>
 <h3>AfD Ergebnisse bei der EU Wahl 2024</h3>
 
-<div class="main-text">
-    <p>Leider haben wir begrenzte Ressourcen und es gibt auch nicht für alle Städte Geodaten. Deshalb gibt es nur eine Auswahl an Städten.</p>
+<!-- Wrapper für den Haupttext und die Kacheln -->
+<div class="content-wrapper">
+    <div class="main-text">
+        <p>Leider haben wir begrenzte Ressourcen und es gibt auch nicht für alle Städte Geodaten. Deshalb gibt es nur eine Auswahl an Städten.</p>
 
-    <p><strong>WICHTIG:</strong> In den meisten Städten werden nur die Stimmen der Urnenwahl dargestellt. Das führt zu einer ziemlichen Überschätzung der AfD-Werte. Das liegt daran, dass die AfD meist deutlich mehr Stimmen über die Urnenwahl bekommt als über die Briefwahl. Ein Beispiel hierfür ist in München zu sehen: <a href="https://www.wahlen-muenchen.de/ergebnisse/20240609europawahl/ergebnisse_gemeinde_162.html#id_c27c6c02_2d44_4b06_b4fc_2aa6f662f93c" target="_blank">München Wahl Ergebnisse</a>. Die räumliche Verteilung der Zustimmung zur AfD wird aber vermutlich gut widergespiegelt. </p>
-    <h4>Weitere Ressourcen:</h4>
-    <ul>
-        <li><a href="https://www.zeit.de/politik/deutschland/2024-06/europawahl-ergebnisse-daten-grossstaedte-wahllokale" target="_blank">Die ZEIT</a> hat ein ähnliches Projekt gemacht</li>
-        <li><a href="https://interaktiv.tagesspiegel.de/lab/bundestagswahl-2025-ergebnisse-karten-historisch-wahlkreise-gemeinden/" target="_blank">Der Tagesspiegel</a> stellt die Ergebnisse der Bundestagswahl dar, allerdings auf Ebene der Gemeinden. Besonders im ländlichen Raum sind Gemeinden und Wahlbezirke aber oft identisch.</li>
+        <p><strong>WICHTIG:</strong> In den meisten Städten werden nur die Stimmen der Urnenwahl dargestellt. Das führt zu einer ziemlichen Überschätzung der AfD-Werte. Das liegt daran, dass die AfD meist deutlich mehr Stimmen über die Urnenwahl bekommt als über die Briefwahl. Ein Beispiel hierfür ist in München zu sehen: <a href="https://www.wahlen-muenchen.de/ergebnisse/20240609europawahl/ergebnisse_gemeinde_162.html#id_c27c6c02_2d44_4b06_b4fc_2aa6f662f93c" target="_blank">München Wahl Ergebnisse</a>. Die räumliche Verteilung der Zustimmung zur AfD wird aber vermutlich gut widergespiegelt. </p>
+        <h4>Weitere Ressourcen:</h4>
+        <ul>
+            <li><a href="https://www.zeit.de/politik/deutschland/2024-06/europawahl-ergebnisse-daten-grossstaedte-wahllokale" target="_blank">Die ZEIT</a> hat ein ähnliches Projekt gemacht</li>
+            <li><a href="https://interaktiv.tagesspiegel.de/lab/bundestagswahl-2025-ergebnisse-karten-historisch-wahlkreise-gemeinden/" target="_blank">Der Tagesspiegel</a> stellt die Ergebnisse der Bundestagswahl dar, allerdings auf Ebene der Gemeinden. Besonders im ländlichen Raum sind Gemeinden und Wahlbezirke aber oft identisch.</li>
+        </ul>
+
+        <h4>Hier die Links zu den Städten:</h4>
+    </div>
+
+    <ul class="city-grid">
+        <li><a href="#berlin">Berlin</a></li>
+        <li><a href="#darmstadt">Darmstadt</a></li>
+        <li><a href="#dresden">Dresden</a></li>
+        <li><a href="#duesseldorf">Düsseldorf</a></li>
+        <li><a href="#frankfurt">Frankfurt</a></li>
+        <li><a href="#hamburg">Hamburg</a></li>
+        <li><a href="#koeln">Köln</a></li>
+        <li><a href="#leipzig">Leipzig</a></li>
+        <li><a href="#muenster">Münster</a></li>
+        <li><a href="#potsdam">Potsdam</a></li>
+        <li><a href="#stuttgart">Stuttgart</a></li>
     </ul>
-
-    <h4>class="city-links-title"Hier die Links zu den Städten:</h4>
 </div>
-
-<!-- Grid Container für die Städte -->
-<ul class="city-grid">
-    <li><a href="#berlin">Berlin</a></li>
-    <li><a href="#darmstadt">Darmstadt</a></li>
-    <li><a href="#dresden">Dresden</a></li>
-    <li><a href="#duesseldorf">Düsseldorf</a></li>
-    <li><a href="#frankfurt">Frankfurt</a></li>
-    <li><a href="#hamburg">Hamburg</a></li>
-    <li><a href="#koeln">Köln</a></li>
-    <li><a href="#leipzig">Leipzig</a></li>
-    <li><a href="#muenster">Münster</a></li>
-    <li><a href="#potsdam">Potsdam</a></li>
-    <li><a href="#stuttgart">Stuttgart</a></li>
-</ul>
 
 <!-- Pop-up Overlay and Content -->
 <div id="popup" class="popup-overlay">
@@ -190,55 +200,6 @@
     </div>
 </div>
 
-<!-- Maps (with click event to trigger pop-up) -->
-<h3 id="berlin">Berlin</h3>
-<iframe src="assets/berlin_eu_24.html" onclick="openPopup('assets/berlin_eu_24.html')"></iframe>
-
-<h3 id="darmstadt">Darmstadt</h3>
-<iframe src="assets/darmstadt_eu_24.html" onclick="openPopup('assets/darmstadt_eu_24.html')"></iframe>
-
-<h3 id="dresden">Dresden</h3>
-<iframe src="assets/dresden_eu_24.html" onclick="openPopup('assets/dresden_eu_24.html')"></iframe>
-
-<h3 id="duesseldorf">Düsseldorf</h3>
-<iframe src="assets/duesseldorf_eu_24.html" onclick="openPopup('assets/duesseldorf_eu_24.html')"></iframe>
-
-<h3 id="frankfurt">Frankfurt</h3>
-<iframe src="assets/frankfurt_eu_24.html" onclick="openPopup('assets/frankfurt_eu_24.html')"></iframe>
-
-<h3 id="hamburg">Hamburg</h3>
-<iframe src="assets/hamburg_eu_24.html" onclick="openPopup('assets/hamburg_eu_24.html')"></iframe>
-
-<h3 id="koeln">Köln</h3>
-<iframe src="assets/koeln_eu_24.html" onclick="openPopup('assets/koeln_eu_24.html')"></iframe>
-
-<h3 id="leipzig">Leipzig</h3>
-<iframe src="assets/leipzig_eu_24.html" onclick="openPopup('assets/leipzig_eu_24.html')"></iframe>
-
-<h3 id="muenster">Münster</h3>
-<iframe src="assets/muenster_eu_24.html" onclick="openPopup('assets/muenster_eu_24.html')"></iframe>
-
-<h3 id="potsdam">Potsdam</h3>
-<iframe src="assets/potsdam_eu_24.html" onclick="openPopup('assets/potsdam_eu_24.html')"></iframe>
-
-<h3 id="stuttgart">Stuttgart</h3>
-<iframe src="assets/stuttgart_eu_24.html" onclick="openPopup('assets/stuttgart_eu_24.html')"></iframe>
-
-<script>
-    // Open Pop-up function
-    function openPopup(url) {
-        document.getElementById('popup-iframe').src = url;
-        document.getElementById('popup').style.display = 'flex';
-    }
-
-    // Close Pop-up function
-    function closePopup() {
-        document.getElementById('popup').style.display = 'none';
-        document.getElementById('popup-iframe').src = ''; // Stop the iframe from loading
-    }
-</script>
-
 </body>
 </html>
-
 
