@@ -44,7 +44,7 @@
         .main-text {
             font-size: 1.2em; /* Increased font size */
             line-height: 1.6; /* Spacing between lines */
-            margin: 40px
+            margin: 40px;
         }
 
         /* Additional space between text and iframe */
@@ -104,6 +104,38 @@
                 width: 90%;
             }
         }
+
+        /* Grid Styles for City Links */
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatically adjust columns */
+            gap: 20px;
+            margin-top: 40px;
+            list-style-type: none;
+            padding: 0;
+            justify-items: center;
+        }
+
+        .city-grid li {
+            background-color: #3498db; /* Blue background */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1.2em;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .city-grid li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .city-grid li:hover {
+            transform: scale(1.05); /* Slightly enlarge the tile */
+            background-color: #2980b9; /* Darker blue on hover */
+        }
     </style>
 </head>
 
@@ -115,8 +147,7 @@
 <div class="main-text">
     <p>Leider haben wir begrenzte Ressourcen und es gibt auch nicht für alle Städte Geodaten. Deshalb gibt es nur eine Auswahl an Städten.</p>
 
-    <p><strong>WICHTIG:</strong> In den meisten Städten werden nur die Stimmen der Urnenwahl dargestellt. Das führt zu einer ziemlichen Überschätzung der AfD-Werte. Das liegt daran, dass die AfD meist deutlich mehr Stimmen über die Urnenwahl bekommt als über die Briefwahl. Ein Beispiel hierfür ist in München zu sehen: <a href="https://www.wahlen-muenchen.de/ergebnisse/20240609europawahl/ergebnisse_gemeinde_162.html#id_c27c6c02_2d44_4b06_b4fc_2aa6f662f93c" target="_blank">München Wahl Ergebnisse</a>. Die räumliche Verteilung der Zustimmung zur AfD wird aber vermutlich gut widergespiegelt. Als Anhaltspunkt für Haustürgespräche sind die Karten deshalb gut geeignet.</p>
-    </p>
+    <p><strong>WICHTIG:</strong> In den meisten Städten werden nur die Stimmen der Urnenwahl dargestellt. Das führt zu einer ziemlichen Überschätzung der AfD-Werte. Das liegt daran, dass die AfD meist deutlich mehr Stimmen über die Urnenwahl bekommt als über die Briefwahl. Ein Beispiel hierfür ist in München zu sehen: <a href="https://www.wahlen-muenchen.de/ergebnisse/20240609europawahl/ergebnisse_gemeinde_162.html#id_c27c6c02_2d44_4b06_b4fc_2aa6f662f93c" target="_blank">München Wahl Ergebnisse</a>. Die räumliche Verteilung der Zustimmung zur AfD wird aber vermutlich gut widergespiegelt. </p>
     <h4>Weitere Ressourcen:</h4>
     <ul>
         <li><a href="https://www.zeit.de/politik/deutschland/2024-06/europawahl-ergebnisse-daten-grossstaedte-wahllokale" target="_blank">Die ZEIT</a> hat ein ähnliches Projekt gemacht</li>
@@ -126,8 +157,8 @@
 
 <h4>Hier die Links zu den Städten:</h4>
 
-<!-- TOC Container ohne Box -->
-<ul class="toc">
+<!-- Grid Container für die Städte -->
+<ul class="city-grid">
     <li><a href="#berlin">Berlin</a></li>
     <li><a href="#darmstadt">Darmstadt</a></li>
     <li><a href="#dresden">Dresden</a></li>
@@ -199,5 +230,4 @@
 
 </body>
 </html>
-
 
