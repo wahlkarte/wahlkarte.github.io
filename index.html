@@ -122,7 +122,7 @@
             }
                     
             .city-grid {
-                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Weniger Spalten für mobile Geräte */
+                grid-template-columns: repeat(2, 1fr); /*grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Weniger Spalten für mobile Geräte */
                 gap: 10px; /* Weniger Abstand zwischen den Kacheln */
             }
             
@@ -155,7 +155,7 @@
             }
         
             .city-grid {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Kacheln untereinander anordnen */
+                grid-template-columns: repeat(2, 1fr); /* Kacheln untereinander anordnen */
             }
         }
 
@@ -163,7 +163,7 @@
         /* Grid Styles for City Links */
         .city-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatically adjust columns */
+            grid-template-columns: repeat(2, 1fr); /* Automatically adjust columns */
             gap: 10px;
             margin-top: 40px;
             list-style-type: none;
