@@ -146,8 +146,8 @@
             }
 
             .city-grid li {
-            font-size: 1em;
-            margin-left: 10px;
+                font-size: 1em;
+                margin-left: 10px 0;
             }
         
             .main-text {
@@ -164,7 +164,7 @@
         /* Grid Styles for City Links */
         .city-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Automatically adjust columns */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatically adjust columns */
             gap: 10px;
             margin-top: 40px;
             list-style-type: none;
