@@ -11,11 +11,11 @@
             margin: 70px;
             background-color: #f4f4f4;
             color: #333;
-            font-size: 1.3em;
+            font-size: 1.2em;
         }
         h1 {
             text-align: center;
-            font-size: 4.5em;
+            font-size: 4em;
             margin-bottom: 5px;
             font-weight: 500;
         }
@@ -47,10 +47,17 @@
             display: block;
             cursor: pointer;
         }
+        h4 {
+            font-family: 'Lato', sans-serif;
+            margin: 70px;
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 1.2em;
+        }
 
         /* Larger text for the main content */
         .main-text {
-            font-size: 1.3em; /* Increased font size */
+            font-size: 1.2em; /* Increased font size */
             line-height: 1.6; /* Spacing between lines */
             margin: 70px 70px 40px; /* Erhöhte Margin */
             text-align: left; /* Links ausgerichtet */
@@ -87,7 +94,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            font-size: 2em;
+            font-size: 1.2em;
             color: white;
             background-color: transparent;
             border: none;
@@ -100,7 +107,7 @@
         @media (max-width: 1024px) {
             body {
                 margin: 20px; /* Weniger Rand auf größeren Tablets und kleineren Laptops */
-                font-size: 1.1em; /* Etwas kleinere Schriftgröße */
+                font-size: 1em; /* Etwas kleinere Schriftgröße */
             }
         
             h1 {
@@ -112,13 +119,17 @@
             }
         
             h2 {
-                font-size: 1.6em; /* Kleinere Schrift für h2 */
+                font-size: 1.2em; /* Kleinere Schrift für h2 */
             }
         
             iframe {
                 width: 100%; /* Volle Breite auf mobilen Geräten */
                 height: 600px; /* Angepasste Höhe */
                 margin-bottom: 30px; /* Weniger Abstand unter den iframes */
+            }
+
+            h4 {
+                font-size: 1em; /* Kleinere Schrift für h2 */
             }
         
             .city-grid {
@@ -246,6 +257,7 @@
         <li><a href="#muenster">Münster</a></li>
         <li><a href="#potsdam">Potsdam</a></li>
         <li><a href="#stuttgart">Stuttgart</a></li>
+        <li><a href="#kiel">Kiel</a></li>
         <li><a href="#rheinlandpfalz">Rheinland-Pfalz</a></li>
         <li><a href="#schleswigholstein">Schleswig-Holstein</a></li>
     </ul>
@@ -291,6 +303,9 @@
 
 <h3 id="stuttgart" onclick="openPopup('assets/stuttgart_eu_24.html')">Stuttgart</h3>
 <iframe src="assets/stuttgart_eu_24.html"></iframe>
+
+<h3 id="kiel" onclick="openPopup('assets/kiel_eu_24.html')">Kiel</h3>
+<iframe src="assets/kiel_eu_24.html"></iframe>
 
 <h2 id="rheinlandpfalz">Rheinland-Pfalz</h2>
 <a href="https://wahlen.rlp.23degrees.eu/" target="_blank">Landeswahlleiter RP</a>
